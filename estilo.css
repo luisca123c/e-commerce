@@ -1,0 +1,67 @@
+/* Propiedades Personalizadas (Variables) */
+:root {
+    --color-primario: #8A2BE2; /* Azul violeta */
+    --color-primario-oscuro: #6A1FB8; /* Azul violeta más oscuro */
+    --color-secundario: #4B0082; /* Indigo */
+    --color-acento: #DA70D6; /* Orquídea */
+    --color-texto-claro: #FFFFFF;
+    --color-texto-oscuro: #333333;
+    --color-fondo-claro: #F5F5F5;
+    --color-fondo-oscuro: #222222;
+    --espaciado-pequeno: 8px;
+    --espaciado-medio: 16px;
+    --espaciado-grande: 24px;
+    --radio-borde: 5px;
+    --fuente-sans: Arial, sans-serif;
+    --tamano-fuente-base: 16px;
+}
+
+/* Estilos Globales y Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-sans);
+    font-size: var(--tamano-fuente-base);
+    line-height: 1.6;
+    color: var(--color-texto-oscuro);
+    background-color: var(--color-fondo-claro);
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-medio);
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primario);
+}
+
+a:hover {
+    color: var(--color-primario-oscuro);
+}
+
+ul {
+    list-style: none;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    padding: var(--espaciado-pequeno) var(--espaciado-medio);
+    border-radius: var(--radio-borde);
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
+    transition: background-color 0.3s ease;
+}
+
+/* Modificador para el estado hover del botón */
+.button--hover:hover { /* El modificador se aplica con :hover */
+    background-color: var(--color-primario-oscuro);
+}
