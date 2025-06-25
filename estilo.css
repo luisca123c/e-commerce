@@ -1,9 +1,9 @@
-/* Propiedades Personalizadas (Variables) */
+/* Variables CSS */
 :root {
-    --color-primario: #8A2BE2; /* Azul violeta */
-    --color-primario-oscuro: #6A1FB8; /* Azul violeta más oscuro */
-    --color-secundario: #4B0082; /* Indigo */
-    --color-acento: #DA70D6; /* Orquídea */
+    --color-primario: #8A2BE2;
+    --color-primario-oscuro: #6A1FB8;
+    --color-secundario: #4B0082;
+    --color-acento: #DA70D6;
     --color-texto-claro: #FFFFFF;
     --color-texto-oscuro: #333333;
     --color-fondo-claro: #F5F5F5;
@@ -16,13 +16,14 @@
     --tamano-fuente-base: 16px;
 }
 
-/* Estilos Globales y Resets */
+/* Resets Globales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos base del body */
 body {
     font-family: var(--fuente-sans);
     font-size: var(--tamano-fuente-base);
@@ -31,6 +32,7 @@ body {
     background-color: var(--color-fondo-claro);
 }
 
+/* Contenedor principal */
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
@@ -38,6 +40,7 @@ body {
     text-align: center;
 }
 
+/* Estilos de enlaces */
 a {
     text-decoration: none;
     color: var(--color-primario);
@@ -47,10 +50,17 @@ a:hover {
     color: var(--color-primario-oscuro);
 }
 
+/* Estilos de listas */
 ul {
     list-style: none;
 }
 
+/* Estilos de párrafos */
+p {
+    margin-bottom: var(--espaciado-medio);
+}
+
+/* Componente botón */
 .button {
     cursor: pointer;
     border: none;
@@ -61,7 +71,214 @@ ul {
     transition: background-color 0.3s ease;
 }
 
-/* Modificador para el estado hover del botón */
-.button--hover:hover { /* El modificador se aplica con :hover */
+/* Modificador de botón hover */
+.button--hover:hover {
     background-color: var(--color-primario-oscuro);
+}
+
+/* Estilos del Header */
+.header {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    padding: var(--espaciado-medio) 0;
+}
+.header__menu{
+    margin: 0 auto;
+    display: inline-block;
+}
+.header__top,
+.header__main,
+.header__menu {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: var(--espaciado-medio);
+    margin-bottom: var(--espaciado-medio);
+    
+
+}
+
+.header__top:last-child,
+.header__main:last-child,
+.header__menu:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.header__contenedor {
+    margin-left: var(--espaciado-medio);
+    margin-right: var(--espaciado-medio);
+    text-align: justify;
+    font-size: 0;
+    padding-bottom: 1px;
+    box-sizing: content-box;
+}
+
+.header__contenedor:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.header__contacto,
+.header__nav-top,
+.header__logo,
+.header__busqueda,
+.header__acciones,
+.header__lista-menu {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: var(--tamano-fuente-base);
+}
+
+.header__contacto {
+    margin-right: var(--espaciado-grande);
+}
+
+.header__nav-top .header__lista-nav,
+.header__lista-menu {
+    text-align: center;
+}
+
+.header__item-nav,
+.header__item-menu {
+    display: inline-block;
+    margin-right: var(--espaciado-medio);
+}
+
+.header__item-nav:last-child,
+.header__item-menu:last-child {
+    margin-right: 0;
+}
+
+.header__enlace-nav,
+.header__enlace-menu {
+    color: var(--color-texto-claro);
+    padding: var(--espaciado-pequeno) 0;
+    display: block;
+}
+
+.header__enlace-nav:hover,
+.header__enlace-menu:hover {
+    color: var(--color-acento);
+}
+
+.header__logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--color-acento);
+    margin-right: var(--espaciado-grande);
+}
+
+.header__busqueda {
+    margin-right: var(--espaciado-grande);
+    position: relative;
+}
+
+.header__entrada-busqueda {
+    padding: var(--espaciado-pequeno);
+    border: 1px solid var(--color-primario-oscuro);
+    border-radius: var(--radio-borde);
+    background-color: var(--color-fondo-oscuro);
+    color: var(--color-texto-claro);
+    width: 300px;
+}
+
+.header__entrada-busqueda::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header__boton-busqueda {
+    background-color: var(--color-primario-oscuro);
+    color: var(--color-texto-claro);
+    margin-left: var(--espaciado-pequeno);
+}
+
+.header__acciones .header__enlace-accion {
+    color: var(--color-texto-claro);
+    margin-left: var(--espaciado-medio);
+}
+
+.header__enlace-accion--carrito {
+    background-color: var(--color-acento);
+    padding: var(--espaciado-pequeno);
+    border-radius: var(--radio-borde);
+    margin-left: var(--espaciado-medio);
+}
+
+.header__enlace-accion--carrito:hover {
+    background-color: var(--color-primario);
+}
+
+/* Estilos del Footer */
+.footer {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-claro);
+    padding: var(--espaciado-grande) 0;
+    margin-top: var(--espaciado-grande);
+}
+
+.footer__contenedor {
+    text-align: justify;
+    font-size: 0;
+    padding-bottom: 1px;
+    box-sizing: content-box;
+}
+
+.footer__contenedor:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.footer__seccion {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 0 1.5%;
+    text-align: left;
+    font-size: var(--tamano-fuente-base);
+}
+
+.footer__titulo {
+    font-size: 19px;
+    color: var(--color-acento);
+    margin-bottom: var(--espaciado-medio);
+}
+
+.footer__lista-item {
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+.footer__enlace {
+    color: var(--color-texto-claro);
+}
+
+.footer__enlace:hover {
+    color: var(--color-acento);
+}
+
+.footer__social-enlace {
+    display: inline-block;
+    background-color: var(--color-primario-oscuro);
+    color: var(--color-texto-claro);
+    padding: var(--espaciado-pequeno);
+    border-radius: var(--radio-borde);
+    margin-right: var(--espaciado-pequeno);
+}
+
+.footer__social-enlace:hover {
+    background-color: var(--color-primario);
+}
+
+.footer__bottom {
+    background-color: var(--color-primario-oscuro);
+    padding: var(--espaciado-medio) 0;
+    text-align: center;
+    margin-top: var(--espaciado-grande);
+}
+
+.footer__derechos {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0;
 }
