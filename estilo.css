@@ -74,6 +74,7 @@ p {
 /* Modificador de botón hover */
 .button--hover:hover {
     background-color: var(--color-primario-oscuro);
+    color: var(--color-texto-claro);
 }
 
 /* Estilos del Header */
@@ -82,18 +83,15 @@ p {
     color: var(--color-texto-claro);
     padding: var(--espaciado-medio) 0;
 }
-.header__menu{
-    margin: 0 auto;
-    display: inline-block;
-}
+
 .header__top,
 .header__main,
 .header__menu {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: var(--espaciado-medio);
     margin-bottom: var(--espaciado-medio);
-    
-
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .header__top:last-child,
@@ -105,8 +103,6 @@ p {
 }
 
 .header__contenedor {
-    margin-left: var(--espaciado-medio);
-    margin-right: var(--espaciado-medio);
     text-align: justify;
     font-size: 0;
     padding-bottom: 1px;
@@ -136,7 +132,7 @@ p {
 
 .header__nav-top .header__lista-nav,
 .header__lista-menu {
-    text-align: center;
+    text-align: left;
 }
 
 .header__item-nav,
@@ -281,4 +277,138 @@ p {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 0;
+}
+
+/* Estilos de la Sección Principal (Hero) */
+.seccion-principal {
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
+    padding: 60px 0;
+    margin-bottom: var(--espaciado-grande);
+}
+
+.seccion-principal__contenedor {
+    text-align: justify;
+    font-size: 0;
+    padding-bottom: 1px;
+    box-sizing: content-box;
+}
+
+.seccion-principal__contenedor:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.seccion-principal__contenido,
+.seccion-principal__contenedor-imagen {
+    display: inline-block;
+    vertical-align: middle;
+    width: 48%;
+    font-size: var(--tamano-fuente-base);
+    text-align: left;
+    margin: 0 1%;
+}
+
+.seccion-principal__titulo {
+    font-size: 36px;
+    margin-bottom: var(--espaciado-medio);
+    color: var(--color-acento);
+}
+
+.seccion-principal__texto {
+    font-size: 18px;
+    margin-bottom: var(--espaciado-grande);
+}
+
+.seccion-principal__boton {
+    background-color: var(--color-acento);
+    color: var(--color-texto-claro);
+    padding: var(--espaciado-medio) var(--espaciado-grande);
+    border-radius: var(--radio-borde);
+    font-size: 18px;
+    display: inline-block;
+}
+
+.seccion-principal__boton:hover {
+    background-color: var(--color-primario-oscuro);
+}
+
+.seccion-principal__imagen {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radio-borde);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos de la Rejilla de Productos */
+.rejilla-productos {
+    padding: var(--espaciado-grande) 0;
+    background-color: var(--color-fondo-claro);
+}
+
+.rejilla-productos__titulo {
+    font-size: 32px;
+    color: var(--color-secundario);
+    margin-bottom: var(--espaciado-grande);
+}
+
+.rejilla-productos__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espaciado-grande);
+    justify-items: center;
+}
+
+.tarjeta-producto {
+    background-color: var(--color-texto-claro);
+    border: 1px solid #ddd;
+    border-radius: var(--radio-borde);
+    padding: var(--espaciado-medio);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta-producto__imagen {
+    max-width: 100%;
+    height: 250px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-radius: var(--radio-borde);
+    margin-bottom: var(--espaciado-medio);
+}
+
+.tarjeta-producto__titulo {
+    font-size: 22px;
+    color: var(--color-secundario);
+    margin-bottom: var(--espaciado-pequeno);
+    height: 3em; /* Asegura espacio para 2 líneas de texto */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tarjeta-producto__precio {
+    font-size: 20px;
+    color: var(--color-primario);
+    font-weight: bold;
+    margin-bottom: var(--espaciado-medio);
+}
+
+.tarjeta-producto__boton {
+    width: 100%;
+    padding: var(--espaciado-pequeno) var(--espaciado-medio);
+    font-size: var(--tamano-fuente-base);
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
+}
+
+.tarjeta-producto__boton:hover {
+    background-color: var(--color-primario-oscuro);
 }
