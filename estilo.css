@@ -350,7 +350,10 @@ p {
     background-color: var(--color-primario-oscuro);
 }
 
-/* Estilos del Footer */
+/* ====================
+   FOOTER
+======================= */
+
 .footer {
     background-color: var(--color-secundario);
     color: var(--color-texto-claro);
@@ -359,25 +362,17 @@ p {
 }
 
 .footer__contenedor {
-    text-align: justify;
-    font-size: 0;
-    padding-bottom: 1px;
-    box-sizing: content-box;
-}
-
-.footer__contenedor:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaciado-grande);
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .footer__seccion {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-    margin: 0 1.5%;
-    text-align: left;
-    font-size: var(--tamano-fuente-base);
+    flex: 1;
+    min-width: 200px;
 }
 
 .footer__titulo {
@@ -398,13 +393,18 @@ p {
     color: var(--color-acento);
 }
 
+.footer__social {
+    display: flex;
+    gap: var(--espaciado-pequeno);
+    flex-wrap: wrap;
+}
+
 .footer__social-enlace {
     display: inline-block;
     background-color: var(--color-primario-oscuro);
     color: var(--color-texto-claro);
     padding: var(--espaciado-pequeno);
     border-radius: var(--radio-borde);
-    margin-right: var(--espaciado-pequeno);
 }
 
 .footer__social-enlace:hover {
@@ -421,5 +421,5 @@ p {
 .footer__derechos {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0;
+    margin: 0;
 }
